@@ -1,0 +1,2 @@
+defmodule ElixirIpc do
+end
