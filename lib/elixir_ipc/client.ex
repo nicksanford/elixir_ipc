@@ -2,6 +2,8 @@ defmodule ElixirIpc.Client do
   use GenServer
   defstruct [:socket, :path, :send_timeout, :recv_timeout]
 
+  def start_link(), do: start_link([])
+
   def start_link(opts) do
     state = %__MODULE__{
       path: Keyword.get(opts, :path, "/tmp/elixir_test.ipc"),
